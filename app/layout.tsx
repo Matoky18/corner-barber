@@ -1,5 +1,5 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import type { Metadata} from "next";
+import { Geist, Geist_Mono, Michroma ,Roboto } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -14,6 +14,17 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const michroma = Michroma({
+   variable : "--font-michroma",
+   subsets: ["latin"],
+   weight : "400"
+})
+
+const roboto = Roboto ({
+  variable : "--font-roboto",
+  subsets : ["latin"]
+})
+
 export const metadata: Metadata = {
   title: "Corner Barber",
   description: "Réservez votre coupe au Corner Barber  dégradés, barbe et style urbain au cœur de la ville",
@@ -27,7 +38,7 @@ export default function RootLayout({
   return (
     <html
       lang="fr"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${michroma.variable} ${roboto.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <Navbar/>

@@ -3,11 +3,17 @@ import {type Service} from "../data/services"
 
 
 const ServiceCard = ({service} : {service : Service} ) => {
+      const flexSpacing= ' flex justify-between items-center'
+
+
   return (
-    <Link href={`/services/${service.slug}`} >
+    <Link className= {`${flexSpacing} w-[350px] h-[150px]   flex-col `} href={`/services/${service.slug}`} >
    
-       {service.name} : {service.price}€ - {service.duration}min <br />
-       {service.description} 
+        <h1 className= {`font-michroma`} >{service.name} : {service.duration}min</h1>
+        
+        <h2 className= {` text-center `} >{service.description} </h2>
+          
+        <div className= {`font-michroma`} >{service.price} £ </div>
      
      </Link>
     

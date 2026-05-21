@@ -1,15 +1,32 @@
 "use client"
 import Link from 'next/link'
-import React from 'react'
+import {HomeIcon , PhoneIcon } from '@heroicons/react/24/solid'
 
 const Navbar = () => {
+
+  const itemCenter = "text-center flex items-center justify-center"
+  const fontMichroma = "font-[family-name:var(--font-michroma)]"
+
+  const iconStyle = `bg-red h-[16px] ${itemCenter} `
+  const itemNavStyle = `  ${itemCenter} gap-[10px]  `
+  
+
+
   return (
-    <div>
-      <ul>
-            <li><Link href={"/"} >Accueil</Link></li>
-            <li><Link href={"/contact"} >Réservation</Link></li>
-            <li><Link href={"/services"} >Service</Link></li>
-      </ul>
+    <div className='flex  fixed top-0 white text-black w-screen bg-white z-50 ' >
+      <div className='flex  justify-center items-center w-full h-20 gap-[50px] ' >
+            <Link className= {`${itemNavStyle}`}   href={"/"} >
+              <HomeIcon  className= {` ${iconStyle}`} />
+            Accueil
+            </Link>
+            <h1 className= {` ${fontMichroma} text-[25px] text-primary-dark  ${itemCenter} `} >CORNER BARBER </h1>
+            <Link href={"/contact"} className= {`${itemNavStyle}`}  >
+             <PhoneIcon  className= {` ${iconStyle}`} />
+              
+              Réservation
+            </Link>
+            {/* <Link href={"/services"} >Service</Link> */}
+      </div>
     </div>
   )
 }
