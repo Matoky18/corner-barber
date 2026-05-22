@@ -19,16 +19,27 @@ const page = async ({params} : {params : Promise<{slug : string}>} ) => {
     )
   }
 
+  const ombre = "shadow-sm"
+
   return (
 
+    <div className="flex  h-[calc(100vh-150px)] pt-[100px] justify-between items-center  pl-[5vw] ">
 
+      <div className= {`${ombre} p-[50px] rounded-[5px] `} >
 
-    <div>
-      <h1>Service Details</h1>
-      {service.name} 
+        <div className='   ' >
+            <h1 className='font-michroma' >{service.name} </h1>
+            
 
-      <br /> {service.description}
+            <br /> {service.description}
+        </div>
+
+      </div>
+
+      <div className="bg-[yellow] w-[50vw] h-[100%] "></div>
+
     </div>
+
   )
 }
 

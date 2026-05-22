@@ -7,6 +7,7 @@ const page = () => {
   const [form,setForm] = useState({
     name : "",
     email : "" ,
+    telephone : "" ,
     message : ""
   })
 
@@ -30,32 +31,40 @@ const page = () => {
 
 
    const flexCenter= ' flex justify-center items-center  '
+   const inputStyle = `${flexCenter} p-3 border-1 border-[gray] rounded-[5px] mb-[12.5px] `
 
   return (
-    <div className= {`pt-[100px] h-[calc(100vh-150px)] ${flexCenter} flex-col `} >
-        <h1>Réservation</h1>
-        <p>Réservez votre coupe en quelques clics et choisissez l’horaire qui vous convient</p>
-        <form className= {`flex-col flex w-[50vw]  `} onSubmit={handleSubmit} >
+    <div className= {`pt-[100px] h-[calc(100vh-150px)]  ${flexCenter} flex-col  `} >
+        <h1 className='text-[30px]' >Réservation</h1>
+        <p className='mb-[50px] w-[350px] text-center ' >Réservez votre coupe en quelques clics et choisissez l’horaire qui vous convient</p>
+        <form className= {`flex-col  flex w-[350px]  `} onSubmit={handleSubmit} >
 
-            <input placeholder='Nom' type="text" id="name" value={form.name} name="name" onChange={handleChange} />
+            <input className= {`${inputStyle} h-[50px] `} placeholder='Nom' type="text" id="name" value={form.name} name="name" onChange={handleChange} />
 
-            <input placeholder='Email' type="email" id="email" name="email" value={form.email} onChange={handleChange}  />
+            <input className= {`${inputStyle} h-[50px] `} placeholder='Email' type="email" id="email" name="email" value={form.email} onChange={handleChange}  />
+
+            <input className= {`${inputStyle} h-[50px] `} placeholder='Telephone' type="email" id="telephone" name="telephone" value={form.telephone} onChange={handleChange}  />
 
 
-            <label htmlFor="service">Service :</label>
-            <select  name="service" id="service"  >
+            <div className= {`flex`} >
 
-              <option  value="">Choisir un service</option>
-              {services.map(service=>{
-                return <option key={service.id} className= {``} value= {service.slug} > {service.name} : {service.description} </option>
-              })}
+                {/* <label htmlFor="service">Service</label> */}
+                <select className= {`${inputStyle} w-[100%] mb-[10px] h-[50px]`}  name="service" id="service">
 
-            </select>
+                  <option  value="">Choisir un service</option>
+                  {services.map(service=>{
+                    return <option key={service.id} className= {``} value= {service.slug} > {service.name}  </option>
+                  })}
 
-            <label htmlFor="message">Message:</label>
-            <textarea placeholder="Votre message..." id="message" name="message" value={form.message} onChange={handleChange}  ></textarea>
+                </select>
 
-            <button type="submit">Confirmer le rendez-vous</button>
+            </div>
+            
+
+            {/* <label htmlFor="message">Message:</label> */}
+            <textarea className= {`resize-none ${inputStyle} h-[150px] `} placeholder="Votre message..." id="message" name="message" value={form.message} onChange={handleChange}  ></textarea>
+
+            <button className= {`w-[350px] text-white bg-gradient-dark h-[50px] border-1 border-[gray] rounded-[5px] `} type="submit">Confirmer le rendez-vous</button>
         </form>
     </div>
   )

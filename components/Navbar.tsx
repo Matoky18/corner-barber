@@ -14,12 +14,12 @@ const Navbar = () => {
 
   return (
     <div className='flex  fixed top-0 white  w-screen bg-white z-50 ' >
-      <div className='flex  justify-center items-center w-full h-20 gap-[50px] ' >
+      <div className='flex text-primary-dark justify-center items-center w-full h-20 gap-[50px] ' >
             <Link className= {`${itemNavStyle}`}   href={"/"} >
               <HomeIcon  className= {` ${iconStyle}`} />
             Accueil
             </Link>
-            <h1 className= {` ${fontMichroma} text-[25px] text-primary-dark  ${itemCenter} `} >CORNER BARBER </h1>
+            <h1 className= {` ${fontMichroma} text-[25px] ${itemCenter} `} >CORNER BARBER </h1>
             <Link href={"/contact"} className= {`${itemNavStyle}`}  >
              <PhoneIcon  className= {` ${iconStyle}`} />
               

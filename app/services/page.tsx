@@ -10,18 +10,24 @@ const page = () => {
   const flexCenter= ' flex justify-center items-center  '
 
   return (
+    <>
+      <div className= {``}  ></div>
+        <div className= {`h-[calc(100vh-150px)] pt-[100px] flex-col ${flexCenter} gap-[100px]  `} >
+
+          <h2 className="text-[black] text-[30px]  " >NOS PRESTATIONS</h2>
+
+          <ul className= {`${flexCenter}`}  >
+              {services.map((service)=>{
+              return <li  key={service.id}><ServiceCard  service = {service} /></li> 
+            })}
+          </ul>
+            
+        </div>
+
+    </>
+   
     
-    <div className= {`h-[calc(100vh-150px)] pt-[100px] flex-col ${flexCenter} gap-[50px]  `} >
-
-      <h2 className="text-[black] text-[30px] " >NOS PRESTATIONS</h2>
-
-      <ul className= {`${flexCenter}`}  >
-          {services.map((service)=>{
-          return <li  key={service.id}><ServiceCard  service = {service} /></li> 
-        })}
-      </ul>
-        
-    </div>
+    
   )
 }
 
