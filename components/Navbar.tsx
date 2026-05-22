@@ -13,7 +13,7 @@ const Navbar = () => {
 
 
   return (
-    <div className='flex  fixed top-0 white text-black w-screen bg-white z-50 ' >
+    <div className='flex  fixed top-0 white  w-screen bg-white z-50 ' >
       <div className='flex  justify-center items-center w-full h-20 gap-[50px] ' >
             <Link className= {`${itemNavStyle}`}   href={"/"} >
               <HomeIcon  className= {` ${iconStyle}`} />

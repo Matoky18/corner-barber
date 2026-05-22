@@ -1,20 +1,26 @@
 import ServiceCard from "@/components/ServiceCard";
-import { services, type Service } from "@/data/services";
+import { services} from "@/data/services";
 
 console.log(services)
 
-    const flexCenter= ' flex justify-center items-center'
 
 
 const page = () => {
 
+  const flexCenter= ' flex justify-center items-center  '
 
   return (
     
-    <div className= {`h-[calc(100vh-150px)] pt-[100px] ${flexCenter} gap-[50px]  `} >
-        {services.map((service)=>{
-          return <ServiceCard  key={service.id} service = {service} /> 
+    <div className= {`h-[calc(100vh-150px)] pt-[100px] flex-col ${flexCenter} gap-[50px]  `} >
+
+      <h2 className="text-[black] text-[30px] " >NOS PRESTATIONS</h2>
+
+      <ul className= {`${flexCenter}`}  >
+          {services.map((service)=>{
+          return <li  key={service.id}><ServiceCard  service = {service} /></li> 
         })}
+      </ul>
+        
     </div>
   )
 }

@@ -9,7 +9,7 @@ const ServiceCard = ({service} : {service : Service} ) => {
   return (
     <Link className= {`${flexSpacing} w-[350px] h-[150px]   flex-col `} href={`/services/${service.slug}`} >
    
-        <h1 className= {`font-michroma`} >{service.name} : {service.duration}min</h1>
+        <h1 className= {`font-michroma border-b-2 pb-[15px] `} >{service.name} : {service.duration}min</h1>
         
         <h2 className= {` text-center `} >{service.description} </h2>
           

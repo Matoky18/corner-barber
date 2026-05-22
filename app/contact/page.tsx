@@ -1,4 +1,5 @@
 "use client"
+import { services } from '@/data/services'
 import React, { useState } from 'react'
 
 const page = () => {
@@ -27,17 +28,34 @@ const page = () => {
     setForm({...form , [e.target.name] : e.target.value})
   }
 
+
+   const flexCenter= ' flex justify-center items-center  '
+
   return (
-    <div>
-        <h1>Contact Us</h1>
-        <form onSubmit={handleSubmit} >
-            <label htmlFor="name">Name:</label>
-            <input type="text" id="name" value={form.name} name="name" onChange={handleChange} />
-            <label htmlFor="email">Email:</label>
-            <input type="email" id="email" name="email" value={form.email} onChange={handleChange}  />
+    <div className= {`pt-[100px] h-[calc(100vh-150px)] ${flexCenter} flex-col `} >
+        <h1>Réservation</h1>
+        <p>Réservez votre coupe en quelques clics et choisissez l’horaire qui vous convient</p>
+        <form className= {`flex-col flex w-[50vw]  `} onSubmit={handleSubmit} >
+
+            <input placeholder='Nom' type="text" id="name" value={form.name} name="name" onChange={handleChange} />
+
+            <input placeholder='Email' type="email" id="email" name="email" value={form.email} onChange={handleChange}  />
+
+
+            <label htmlFor="service">Service :</label>
+            <select  name="service" id="service"  >
+
+              <option  value="">Choisir un service</option>
+              {services.map(service=>{
+                return <option key={service.id} className= {``} value= {service.slug} > {service.name} : {service.description} </option>
+              })}
+
+            </select>
+
             <label htmlFor="message">Message:</label>
-            <textarea id="message" name="message" value={form.message} onChange={handleChange}  ></textarea>
-            <button type="submit">Envoyer</button>
+            <textarea placeholder="Votre message..." id="message" name="message" value={form.message} onChange={handleChange}  ></textarea>
+
+            <button type="submit">Confirmer le rendez-vous</button>
         </form>
     </div>
   )
