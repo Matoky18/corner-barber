@@ -17,9 +17,12 @@ const page = () => {
           <h2 className="text-[black] text-[30px]  " >NOS PRESTATIONS</h2>
 
           <ul className= {`${flexCenter}`}  >
+
               {services.map((service)=>{
+
               return <li  key={service.id}><ServiceCard  service = {service} /></li> 
             })}
+            
           </ul>
             
         </div>
