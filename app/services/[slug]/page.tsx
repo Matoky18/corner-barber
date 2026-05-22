@@ -47,7 +47,7 @@ const page = async ({params} : {params : Promise<{slug : string}>} ) => {
 
       </div>
 
-      <div className="bg-[yellow] w-[50vw] h-[100%] "></div>
+      <div  className= {` bg-[white] w-[50vw] h-[100%]`} ></div>
 
     </div>
 
