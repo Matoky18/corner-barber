@@ -22,34 +22,39 @@ const page = async ({params} : {params : Promise<{slug : string}>} ) => {
   }
 
   const ombre = "shadow-sm"
+  const buttonStyle = "flex items-center justify-center gap-[20px] cursor-pointer bg-gradient-dark text-white w-[100%] max-w-[250px] h-[50px] rounded-[5px]"
+  const imageStyle = 'bg-[white] w-[calc(100vw-50px)] lg:w-[50vw] h-[calc(100vh-150px)] bg-cover bg-center'
 
   return (
 
-    <div className="flex  h-[calc(100vh-187px)] pt-[100px] justify-between items-center  ">
+    <div className="">
 
-      <div className="w-[50vw] h-[100%] flex justify-center items-center ">
+      <div className="flex flex-col lg:flex-row lg:h-[calc(100vh-187px)] pt-[75px] lg:pt-[100px] justify-between items-center  ">
+           <div className="lg:w-[50vw] h-[100%] flex justify-center items-center ">
 
-        <div className={` flex flex-col gap-[25px] ${ombre} p-[50px] rounded-[5px]  `} >
-           <h1 className= {`font-michroma border-b-2 pb-[15px] `} >{service.name} : {service.duration}min</h1>
-        
-            <h2 className= {``} >{service.description} </h2>
-              
-            <div className= {`font-michroma`} >{service.price} £ </div>
-
-            <button className='flex items-center justify-center gap-[20px] cursor-pointer bg-gradient-dark text-white w-[250px] h-[50px] rounded-[5px] ' >
-              
-              <ScissorsIcon className='w-[25px] ' ></ScissorsIcon>
-
-              <Link href={`/contact?service=${service.slug}`} >Reserver maintenant</Link>
+            <div className={` flex flex-col gap-[25px] ${ombre} p-[25px] lg:m-[0px] m-[25px] lg:p-[50px] rounded-[5px]  `} >
+              <h1 className= {`font-michroma border-b-2 pb-[15px] `} >{service.name} : {service.duration}min</h1>
             
-            </button>
+                <h2 className= {``} >{service.description} </h2>
+                  
+                <div className= {`font-michroma`} >{service.price} £ </div>
 
-        </div>
+                <button className= {buttonStyle} >
+                  
+                  <ScissorsIcon className='w-[25px] ' ></ScissorsIcon>
+
+                  <Link href={`/contact?service=${service.slug}`} >Reserver maintenant</Link>
+                
+                </button>
+
+            </div>
+
+          </div>
+
+          <div style={{backgroundImage : `url(${service.image})` }}  className= {imageStyle} ></div>
 
       </div>
-
-      <div style={{backgroundImage : `url(${service.image})` }}  className= {` bg-[white] w-[50vw] h-[100%] bg-cover bg-center`} ></div>
-
+     
     </div>
 
   )
