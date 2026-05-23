@@ -1,6 +1,6 @@
 "use client"
 import Link from 'next/link'
-import {HomeIcon , PhoneIcon ,Bars3Icon  } from '@heroicons/react/24/solid'
+import {HomeIcon , PhoneIcon ,Bars3Icon , XMarkIcon   } from '@heroicons/react/24/solid'
 import { useEffect, useState } from 'react'
 
 const Navbar = () => {
@@ -35,13 +35,18 @@ const Navbar = () => {
 
   }
 
+  const iconMobile = !open?
+      <Bars3Icon onClick={()=>setOpen(!open)} className= {`${menuIconStyle}`} ></Bars3Icon>
+      : <XMarkIcon onClick={()=>setOpen(!open)} className= {`${menuIconStyle}`} ></XMarkIcon> 
+
    useEffect(()=>{
       document.body.style.overflow = open ?  "hidden" : "auto"
     },[open])
 
   return (
     <div className= {""} >
-      <Bars3Icon onClick={()=>setOpen(!open)} className= {`${menuIconStyle}`} ></Bars3Icon>
+
+      {iconMobile}
 
       <div className= {`${styleContainerDesktop}  `} >
 
