@@ -22,8 +22,6 @@ const page = () => {
        } ,
        body : JSON.stringify(form)
     })
-
-
   }
 
   const handleChange = (e : React.ChangeEvent<HTMLInputElement|HTMLTextAreaElement>) => {
@@ -38,13 +36,11 @@ const page = () => {
 
 
 
-
-
    const flexCenter= ' flex justify-center items-center  '
    const inputStyle = `${flexCenter} p-3 border-1 border-[gray] rounded-[5px] mb-[12.5px] `
 
   return (
-    <div className= {`pt-[100px] h-[calc(100vh-150px)]  ${flexCenter} flex-col  `} >
+    <div className= {`pt-[100px] min-h-[calc(100vh-150px)]  ${flexCenter} flex-col  `} >
         <h1 className='text-[30px]  tracking-wider' >Réservation</h1>
         <p className='mb-[50px] w-[350px] text-center ' >Réservez votre coupe en quelques clics et choisissez l’horaire qui vous convient</p>
         <form className= {`flex-col  flex w-[350px]  `} onSubmit={handleSubmit} >
@@ -59,11 +55,11 @@ const page = () => {
             <div className= {`flex`} >
 
                 {/* <label htmlFor="service">Service</label> */}
-                <select defaultValue={`${service}` || ""  } className= {`${inputStyle} w-[100%] mb-[10px] h-[50px]`}  name="service" id="service">
+                <select defaultValue={`${service}` || ""  } className= {`cursor-pointer ${inputStyle} w-[100%] mb-[10px] h-[50px]`}  name="service" id="service">
 
                   <option  value="">Choisir un service</option>
                   {services.map(service=>{
-                    return <option key={service.id} className= {``} value= {service.slug} > {service.name}  </option>
+                    return <option key={service.id} className= {`cursor-pointer`} value= {service.slug} > {service.name}  </option>
                   })}
 
                 </select>

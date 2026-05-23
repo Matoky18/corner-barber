@@ -10,8 +10,11 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary-dark : #042A19 ;
+  --color-gray : #E8EAE8 ;
+
   --font-michroma: var(--font-michroma);
   --font-roboto: var(--font-roboto);
+  
 }
 
 @layer utilities {
