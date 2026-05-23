@@ -8,7 +8,7 @@ const Navbar = () => {
   const fontMichroma = "font-[family-name:var(--font-michroma)]"
 
   const iconStyle = `bg-red h-[16px] ${itemCenter} `
-  const itemNavStyle = `  ${itemCenter} gap-[10px]  `
+  const itemNavStyle = `  w-[150px]  ${itemCenter} gap-[10px]  `
   
 
 
@@ -19,8 +19,8 @@ const Navbar = () => {
               <HomeIcon  className= {` ${iconStyle}`} />
             Accueil
             </Link>
-            <h1 className= {` ${fontMichroma} text-[25px] ${itemCenter} `} >CORNER BARBER </h1>
-            <Link href={"/contact"} className= {`${itemNavStyle}`}  >
+            <h1 className= {` ${fontMichroma} text-[25px] ${itemCenter} text-center `} >CORNER BARBER </h1>
+            <Link className= {`${itemNavStyle}`} href={"/contact"} >
              <PhoneIcon  className= {` ${iconStyle}`} />
               
               Réservation

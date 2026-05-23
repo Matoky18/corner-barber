@@ -75,6 +75,7 @@ const page = () => {
             <textarea className= {`resize-none ${inputStyle} h-[150px] `} placeholder="Votre message..." id="message" name="message" value={form.message} onChange={handleChange}  ></textarea>
 
             <button className= {`cursor-pointer w-[350px] text-white bg-gradient-dark h-[50px] border-1 border-[gray] rounded-[5px] `} type="submit">Confirmer le rendez-vous</button>
+        
         </form>
     </div>
   )

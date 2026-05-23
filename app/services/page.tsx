@@ -11,16 +11,19 @@ const page = () => {
 
   return (
     <>
+
       <div className= {``}  ></div>
-        <div className= {`h-[calc(100vh-150px)] pt-[100px] flex-col ${flexCenter} gap-[100px]  `} >
 
-          <h2 className="text-[black] text-[30px]  tracking-wider " >NOS PRESTATIONS</h2>
+        <div className= {`min-h-[calc(100vh-150px)] pt-[100px] flex-col ${flexCenter} gap-[50px] p-[50px] `} >
 
-          <ul className= {`${flexCenter} gap-[25px] `}  >
+          <h2 className="text-[black] text-center text-[25px]  tracking-wider " >NOS PRESTATIONS</h2>
+
+          <ul className= {`flex-wrap ${flexCenter} gap-[25px] `}  >
 
               {services.map((service)=>{
 
-              return <li  key={service.id}><ServiceCard  service = {service} /></li> 
+              return <li className= {`50%`}  key={service.id}><ServiceCard  service = {service} /></li> 
+
             })}
             
           </ul>
@@ -28,8 +31,7 @@ const page = () => {
         </div>
 
     </>
-   
-    
+       
     
   )
 }
