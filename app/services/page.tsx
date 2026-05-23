@@ -14,7 +14,7 @@ const page = () => {
 
       <div className= {``}  ></div>
 
-        <div className= {`min-h-[calc(100vh-150px)] pt-[100px] flex-col ${flexCenter} gap-[50px] p-[50px] `} >
+        <div className= {`min-h-[calc(100vh-187px)] pt-[100px] flex-col ${flexCenter} gap-[50px] p-[50px] `} >
 
           <h2 className="text-[black] text-center text-[25px]  tracking-wider " >NOS PRESTATIONS</h2>
 

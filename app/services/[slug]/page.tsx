@@ -25,7 +25,7 @@ const page = async ({params} : {params : Promise<{slug : string}>} ) => {
 
   return (
 
-    <div className="flex  h-[calc(100vh-150px)] pt-[100px] justify-between items-center  ">
+    <div className="flex  h-[calc(100vh-187px)] pt-[100px] justify-between items-center  ">
 
       <div className="w-[50vw] h-[100%] flex justify-center items-center ">
 

@@ -7,7 +7,7 @@ const Footer = () => {
     const liStyle = `flex-wrap ${flexCenter} gap-[12.5px] `
 
   return (
-    <div className= {` bg-gradient-dark ${flexCenter} flex-col text-white min-h-[150px] p-[25px] pb-[50px] gap-[25px]`} >
+    <div className= {` bg-gradient-dark ${flexCenter} flex-col text-white min-h-[150px] p-[50px]  gap-[25px]`} >
         <ul className= {` flex-wrap gap-[25px] ${flexCenter}`} >
             <li className= {`${liStyle}`}>
                   <MapPinIcon className= {` w-[15px]`} ></MapPinIcon>
