@@ -64,15 +64,15 @@ const Navbar = () => {
 
 
       <div className= {`${styleMenuMobile}`} >
-              <Link onClick={()=>setOpen(false)}  className= {` ${itemStyleMobile} `}   href={"/"} >
-              Accueil              
-              <HomeIcon  className= {` ${iconStyle}`} />
-              </Link>
+          <Link onClick={()=>setOpen(false)}  className= {` ${itemStyleMobile} `}   href={"/"} >
+          Accueil              
+          <HomeIcon  className= {` ${iconStyle}`} />
+          </Link>
 
-              <Link onClick={()=>setOpen(false)} className= {`${itemStyleMobile} `} href={"/contact"} >
-                Réservation
-              <PhoneIcon  className= {` ${iconStyle}`} />                
-            </Link>
+          <Link onClick={()=>setOpen(false)} className= {`${itemStyleMobile} `} href={"/contact"} >
+            Réservation
+          <PhoneIcon  className= {` ${iconStyle}`} />                
+          </Link>
       </div>
 
    </div>
