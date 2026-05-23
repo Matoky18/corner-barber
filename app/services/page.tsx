@@ -14,9 +14,9 @@ const page = () => {
       <div className= {``}  ></div>
         <div className= {`h-[calc(100vh-150px)] pt-[100px] flex-col ${flexCenter} gap-[100px]  `} >
 
-          <h2 className="text-[black] text-[30px]  " >NOS PRESTATIONS</h2>
+          <h2 className="text-[black] text-[30px]  tracking-wider " >NOS PRESTATIONS</h2>
 
-          <ul className= {`${flexCenter}`}  >
+          <ul className= {`${flexCenter} gap-[25px] `}  >
 
               {services.map((service)=>{
 

@@ -1,5 +1,6 @@
 import { services } from '@/data/services'
 import { ScissorsIcon } from '@heroicons/react/24/solid'
+import Link from 'next/link'
 import React from 'react'
 
 
@@ -39,7 +40,7 @@ const page = async ({params} : {params : Promise<{slug : string}>} ) => {
               
               <ScissorsIcon className='w-[25px] ' ></ScissorsIcon>
 
-              Reserver maintenant
+              <Link href={`/contact?service=${service.slug}`} >Reserver maintenant</Link>
             
             </button>
 
@@ -47,7 +48,7 @@ const page = async ({params} : {params : Promise<{slug : string}>} ) => {
 
       </div>
 
-      <div  className= {` bg-[white] w-[50vw] h-[100%]`} ></div>
+      <div style={{backgroundImage : `url(${service.image})` }}  className= {` bg-[white] w-[50vw] h-[100%] bg-cover bg-center`} ></div>
 
     </div>
 

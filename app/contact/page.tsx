@@ -1,5 +1,6 @@
 "use client"
 import { services } from '@/data/services'
+import { useSearchParams } from 'next/navigation'
 import React, { useState } from 'react'
 
 const page = () => {
@@ -30,12 +31,21 @@ const page = () => {
   }
 
 
+
+  const urlParams = useSearchParams()
+
+  const service = urlParams.get('service')
+
+
+
+
+
    const flexCenter= ' flex justify-center items-center  '
    const inputStyle = `${flexCenter} p-3 border-1 border-[gray] rounded-[5px] mb-[12.5px] `
 
   return (
     <div className= {`pt-[100px] h-[calc(100vh-150px)]  ${flexCenter} flex-col  `} >
-        <h1 className='text-[30px]' >Réservation</h1>
+        <h1 className='text-[30px]  tracking-wider' >Réservation</h1>
         <p className='mb-[50px] w-[350px] text-center ' >Réservez votre coupe en quelques clics et choisissez l’horaire qui vous convient</p>
         <form className= {`flex-col  flex w-[350px]  `} onSubmit={handleSubmit} >
 
@@ -49,7 +59,7 @@ const page = () => {
             <div className= {`flex`} >
 
                 {/* <label htmlFor="service">Service</label> */}
-                <select className= {`${inputStyle} w-[100%] mb-[10px] h-[50px]`}  name="service" id="service">
+                <select defaultValue={`${service}` || ""  } className= {`${inputStyle} w-[100%] mb-[10px] h-[50px]`}  name="service" id="service">
 
                   <option  value="">Choisir un service</option>
                   {services.map(service=>{

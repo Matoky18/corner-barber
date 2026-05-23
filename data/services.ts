@@ -19,7 +19,7 @@ export type Service = {
         price: 22,
         duration: 15,
         description: "Coupe à la tondeuse uniquement, une seule longueur.",
-        image : "/services/buzz1.jpg",
+        image : "/services/buzz1.PNG",
     },
     {
         id: "svc_002",
@@ -28,7 +28,7 @@ export type Service = {
         price: 28,
         duration: 30,
         description: "Notre spécialité. Dégradé à blanc, contours tracés au laser, finition produits.",
-        image : "/services/fade1.jpg",
+        image : "/services/fade1.PNG",
     },
     {
         id: "svc_003",
@@ -37,7 +37,7 @@ export type Service = {
         price: 45,
         duration: 60,
         description: "Coupe + Barbe + Shampoing massant.",
-        image : "/services/fullpack1.jpg",
+        image : "/services/fullpack1.PNG",
 
     },
     {
@@ -47,7 +47,7 @@ export type Service = {
         price: 15,
         duration: 15,
         description: "Taille et alignement de la barbe à la tondeuse.",
-        image : "/services/trim1.jpg",
+        image : "/services/trim1.PNG",
     }
 ];
 
