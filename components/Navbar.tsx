@@ -64,12 +64,12 @@ const Navbar = () => {
 
 
       <div className= {`${styleMenuMobile}`} >
-              <Link  className= {` ${itemStyleMobile} `}   href={"/"} >
+              <Link onClick={()=>setOpen(false)}  className= {` ${itemStyleMobile} `}   href={"/"} >
               Accueil              
               <HomeIcon  className= {` ${iconStyle}`} />
               </Link>
 
-              <Link className= {`${itemStyleMobile} `} href={"/contact"} >
+              <Link onClick={()=>setOpen(false)} className= {`${itemStyleMobile} `} href={"/contact"} >
                 Réservation
               <PhoneIcon  className= {` ${iconStyle}`} />                
             </Link>
