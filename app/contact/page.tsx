@@ -37,7 +37,7 @@ const page = () => {
 
    const flexCenter= ' flex justify-center items-center  '
    const inputStyle = `${flexCenter} p-3 border-1 border-[gray] rounded-[5px] mb-[12.5px] `
-   const buttonStyle = "cursor-pointer w-[100%] text-white bg-gradient-dark h-[50px] border-1 border-[gray] rounded-[5px] "
+   const buttonStyle = "cursor-pointer w-[100%] hover:text-whitesmoke text-black transition-all ease-in-out bg-gray  h-[50px] border-1 border-[gray] rounded-[5px] "
 
   return (
     <div className= {`pt-[100px] h-[100vh] flex  items-between ]  ${flexCenter} flex-col  `} >
@@ -49,7 +49,7 @@ const page = () => {
 
             <input className= {`${inputStyle} h-[50px] `} placeholder='Email' type="email" id="email" name="email" value={form.email} onChange={handleChange}  />
 
-            <input className= {`${inputStyle} h-[50px] `} placeholder='Telephone' type="email" id="telephone" name="telephone" value={form.telephone} onChange={handleChange}  />
+            <input className= {`${inputStyle} h-[50px] `} placeholder='Telephone' type="tel" id="telephone" name="telephone" value={form.telephone} onChange={handleChange}  />
 
 
             <div className= {`flex`} >

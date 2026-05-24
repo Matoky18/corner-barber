@@ -32,7 +32,7 @@ const page = async ({params} : {params : Promise<{slug : string}>} ) => {
       <div className="flex flex-col lg:flex-row lg:h-[calc(100vh-187px)] pt-[75px] lg:pt-[100px] justify-between items-center  ">
            <div className="lg:w-[50vw] h-[100%] flex justify-center items-center ">
 
-            <div className={` flex flex-col gap-[25px] ${ombre} p-[25px] lg:m-[0px] m-[25px] lg:p-[50px] rounded-[5px]  `} >
+            <div className={` flex flex-col gap-[25px] ${ombre} p-[25px] lg:m-[0px]  m-[25px] lg:p-[50px] rounded-[5px]  `} >
               <h1 className= {`font-michroma border-b-2 pb-[15px] `} >{service.name} : {service.duration}min</h1>
             
                 <h2 className= {``} >{service.description} </h2>

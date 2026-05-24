@@ -10,8 +10,6 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary-dark : #042A19 ;
-  --color-gray : #E8EAE8 ;
-
   --font-michroma: var(--font-michroma);
   --font-roboto: var(--font-roboto);
   
@@ -20,6 +18,19 @@
 @layer utilities {
   .bg-gradient-dark {
    background: linear-gradient( 90deg,#000000,#042A19) ;
+}
+  .bg-gray {
+  background: #cacaca;
+  transition: all 0.5s ease-in-out;
+}
+  .bg-gray:hover {
+   background: linear-gradient( 90deg,#000000,#042A19) ;
+   color: whitesmoke;
+}
+  .bg-gray:active {
+   background: linear-gradient( 90deg,#000000,#042A19) ;
+   color: whitesmoke;
+   box-shadow: 1px 1px 5px #042A19;
 }
 }
 
