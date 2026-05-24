@@ -1,10 +1,27 @@
 "use client"
 import { services } from '@/data/services'
 import { useSearchParams } from 'next/navigation'
-import React, { useState } from 'react'
+import React, { Suspense, useState } from 'react'
 
 const page = () => {
 
+  return (
+    <Suspense fallback={"Chargement..."} >
+    <ContactForm/>
+    </Suspense>
+  )
+
+ 
+}
+
+
+
+
+export default page
+
+
+function ContactForm() {
+    
   const [form,setForm] = useState({
     name : "",
     email : "" ,
@@ -28,11 +45,11 @@ const page = () => {
     setForm({...form , [e.target.name] : e.target.value})
   }
 
+  
+    const urlParams = useSearchParams()
+    const service = urlParams.get('service')
 
-
-  const urlParams = useSearchParams()
-
-  const service = urlParams.get('service')
+  
 
 
    const flexCenter= ' flex justify-center items-center  '
@@ -41,8 +58,15 @@ const page = () => {
 
   return (
     <div className= {`pt-[100px] h-[100vh] flex  items-between ]  ${flexCenter} flex-col  `} >
+
+
         <h1 className='text-[30px] text-[gray] border-b-2 mb-[25px] tracking-[5px]' >Réservation</h1>
-        <p className='mb-[37.5px]  max-w-[350px] w-[calc(100vw-50px)]  text-center tracking-wider ' >Réservez votre coupe en quelques clics et choisissez l’horaire qui vous convient</p>
+
+        <p className='mb-[37.5px]  max-w-[350px] w-[calc(100vw-50px)]  text-center tracking-wider ' >
+          Réservez votre coupe en quelques clics et choisissez l’horaire qui vous convient
+        </p>
+
+
         <form className= {`flex-col flex max-w-[350px] w-[calc(100vw-50px)]  `} onSubmit={handleSubmit} >
 
             <input className= {`${inputStyle} `} placeholder='Nom' type="text" id="name" value={form.name} name="name" onChange={handleChange} />
@@ -72,13 +96,9 @@ const page = () => {
               
               Confirmer le rendez-vous
               
-              </button>
+            </button>
         
         </form>
     </div>
   )
 }
-
-
-export default page
-
