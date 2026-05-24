@@ -18,7 +18,6 @@ const ServiceCard = ({service} : {service : Service} ) => {
         <h2 className= {` text-center `} >{service.description} </h2>
           
         <div className= {`font-michroma`} >{service.price} £ </div>
-     
      </Link>
     
   )

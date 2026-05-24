@@ -36,25 +36,25 @@ const page = () => {
 
 
    const flexCenter= ' flex justify-center items-center  '
-   const inputStyle = `${flexCenter} p-3 border-1 border-[gray] rounded-[5px] mb-[12.5px] `
+   const inputStyle = `${flexCenter} h-[50px] p-3 border-1 border-[gray] rounded-[5px] mb-[12.5px] `
    const buttonStyle = "cursor-pointer w-[100%] hover:text-whitesmoke text-black transition-all ease-in-out bg-gray  h-[50px] border-1 border-[gray] rounded-[5px] "
 
   return (
     <div className= {`pt-[100px] h-[100vh] flex  items-between ]  ${flexCenter} flex-col  `} >
-        <h1 className='text-[30px]  tracking-wider' >Réservation</h1>
-        <p className='mb-[50px]  max-w-[350px] w-[calc(100vw-50px)]  text-center ' >Réservez votre coupe en quelques clics et choisissez l’horaire qui vous convient</p>
-        <form className= {`flex-col pb-[64px] flex max-w-[350px] w-[calc(100vw-50px)]  `} onSubmit={handleSubmit} >
+        <h1 className='text-[30px] text-[gray] border-b-2 mb-[25px] tracking-[5px]' >Réservation</h1>
+        <p className='mb-[37.5px]  max-w-[350px] w-[calc(100vw-50px)]  text-center tracking-wider ' >Réservez votre coupe en quelques clics et choisissez l’horaire qui vous convient</p>
+        <form className= {`flex-col flex max-w-[350px] w-[calc(100vw-50px)]  `} onSubmit={handleSubmit} >
 
-            <input className= {`${inputStyle} h-[50px] `} placeholder='Nom' type="text" id="name" value={form.name} name="name" onChange={handleChange} />
+            <input className= {`${inputStyle} `} placeholder='Nom' type="text" id="name" value={form.name} name="name" onChange={handleChange} />
 
-            <input className= {`${inputStyle} h-[50px] `} placeholder='Email' type="email" id="email" name="email" value={form.email} onChange={handleChange}  />
+            <input className= {`${inputStyle}  `} placeholder='Email' type="email" id="email" name="email" value={form.email} onChange={handleChange}  />
 
-            <input className= {`${inputStyle} h-[50px] `} placeholder='Telephone' type="tel" id="telephone" name="telephone" value={form.telephone} onChange={handleChange}  />
+            <input className= {`${inputStyle} `} placeholder='Telephone' type="tel" id="telephone" name="telephone" value={form.telephone} onChange={handleChange}  />
 
 
             <div className= {`flex`} >
 
-                <select defaultValue={`${service}` || ""  } className= {`cursor-pointer ${inputStyle} w-[100%] mb-[10px] h-[50px]`}  name="service" id="service">
+                <select defaultValue={`${service}` || ""  } className= {`cursor-pointer ${inputStyle} w-[100%] mb-[12.5px]`}  name="service" id="service">
 
                   <option  value="">Choisir un service</option>
                   {services.map(service=>{
@@ -68,7 +68,11 @@ const page = () => {
 
             <textarea className= {`resize-none ${inputStyle} h-[150px] `} placeholder="Votre message..." id="message" name="message" value={form.message} onChange={handleChange}  ></textarea>
 
-            <button className= {`${buttonStyle}`} type="submit">Confirmer le rendez-vous</button>
+            <button className= {`${buttonStyle}`} type="submit">
+              
+              Confirmer le rendez-vous
+              
+              </button>
         
         </form>
     </div>

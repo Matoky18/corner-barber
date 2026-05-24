@@ -10,8 +10,11 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary-dark : #042A19 ;
+  --color-soft-green : #ACE1AF ;
+  --color-accent : #55DD33 ;
   --font-michroma: var(--font-michroma);
   --font-roboto: var(--font-roboto);
+  --font-inter: var(--font-inter);
   
 }
 

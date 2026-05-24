@@ -1,18 +1,16 @@
 import type { Metadata} from "next";
-import { Geist, Geist_Mono, Michroma ,Roboto } from "next/font/google";
+import {  Michroma ,Roboto , Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+
+const inter = Inter({
+  variable : "--font-inter",
   subsets: ["latin"],
-});
+  weight : "400"
+})
 
 const michroma = Michroma({
    variable : "--font-michroma",
@@ -38,7 +36,7 @@ export default function RootLayout({
   return (
     <html
       lang="fr"
-      className={`${geistSans.variable} ${geistMono.variable} ${michroma.variable} ${roboto.variable} h-full antialiased`}
+      className={` ${michroma.variable} ${roboto.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <Navbar/>
