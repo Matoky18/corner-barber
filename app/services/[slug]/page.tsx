@@ -35,6 +35,7 @@ const page = async ({params} : {params : Promise<{slug : string}>} ) => {
            <div className="lg:w-[50vw] h-[100%] flex justify-center items-center ">
 
             <div className={leftStyle} >
+
               <h1 className= {`font-michroma border-b-2 pb-[15px] `} >{service.name} : {service.duration}min</h1>
             
                 <h2 className= {``} >{service.description} </h2>
@@ -47,7 +48,6 @@ const page = async ({params} : {params : Promise<{slug : string}>} ) => {
                   Reserver maintenant
                 </Link>
         
-
             </div>
 
           </div>
